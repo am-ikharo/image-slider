@@ -30,9 +30,40 @@ function displayImages(getImagesList) {
   dotsContainer.innerHTML = getImagesList
     .map(
       (item, index) => `
-        <span class='dot' data-slide=${index}></span>
+        <span class='dot ${index === 0 ? 'active' : ''}' data-slide=${index}></span>
         `
     )
     .join(" ");
 }
 fetchListOfImages();
+
+// slider functionality
+
+const slides = document.querySelectorAll('.slide');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+let currentslide = 0;
+
+function handleImageSlider(){
+    function activeDot(slide){
+
+    }
+
+    function changeCurrentSlide(){
+
+    }
+
+    nextBtn.addEventListener('click', () => {
+
+    })
+    prevBtn.addEventListener('click', () => {
+
+    })
+
+    dotsContainer.addEventListener('click', => {
+
+    })
+}
+
+
+handleImageSlider();
