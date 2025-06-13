@@ -58,3 +58,18 @@ h1 {
     letter-spacing: 2px;
     cursor: pointer;
 }
+
+.dots-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.dots-container .dot {
+    width: 40px;
+    height: 15px;
+    border-radius: 8px;
+    background-color: white;
+    cursor: pointer;
+}
