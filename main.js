@@ -17,10 +17,11 @@ async function fetchListOfImages() {
 }
 
 function displayImages(getImagesList){
-    slider.innerHTML = getImagesList.map(item => `
+    slider.innerHTML = getImagesList.map(
+        (item) => `
         <div class='slider'>
-        <img src='${item.download_url} alt=${item.}'/>
+        <img src='${item.download_url} alt=${item.id}'/>
         </div>
-        `)
+        `).join(' ');
 }
 fetchListOfImages();
