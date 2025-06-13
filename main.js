@@ -20,7 +20,7 @@ function displayImages(getImagesList) {
   slider.innerHTML = getImagesList
     .map(
       (item) => `
-        <div class='slider'>
+        <div class='slide'>
         <img src=${item.download_url} alt=${item.id}/>
         </div>
         `
