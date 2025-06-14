@@ -4,7 +4,7 @@ const dotsContainer = document.querySelector(".dots-container");
 async function fetchListOfImages() {
   try {
     const response = await fetch(
-      "https://picsum.photos/v2/list?page=1&limit=10",
+      "https://picsum.photos/v2/list?page=1&limit=3",
       { method: "GET" }
     );
     const imagesList = await response.json();
@@ -78,11 +78,17 @@ setTimeout(() => {
   prevBtn.addEventListener("click", () => {
     currentslide--;
     if (0 > currentslide) {
-      currentslide = slides.length;
+      currentslide = slides.length -1;
     }
     changeCurrentSlide(currentslide);
     activeDot(currentslide);
   });
 
-  dotsContainer.addEventListener("click", () => {});
+  dotsContainer.addEventListener("click", (event) => {
+    if(event.target.classList.contains('.dot')){
+        const slide = event.target.dataset.slide
+        changeCurrentSlide(currentslide)
+        activeDot(currentslide)
+    }
+  });
 }, 1000);
