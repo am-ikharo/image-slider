@@ -73,3 +73,8 @@ h1 {
     background-color: white;
     cursor: pointer;
 }
+
+.dots-container .dot.active {
+    background-color: black;
+}
+

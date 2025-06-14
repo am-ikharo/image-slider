@@ -4,7 +4,7 @@ const dotsContainer = document.querySelector(".dots-container");
 async function fetchListOfImages() {
   try {
     const response = await fetch(
-      "https://picsum.photos/v2/list?page=1&limit=3",
+      `https://picsum.photos/v2/list?page=1&limit=5`,
       { method: "GET" }
     );
     const imagesList = await response.json();
@@ -85,8 +85,8 @@ setTimeout(() => {
   });
 
   dotsContainer.addEventListener("click", (event) => {
-    if(event.target.classList.contains('.dot')){
-        const slide = event.target.dataset.slide
+    if(event.target.classList.contains('dot')){
+        const currentslide = event.target.dataset.slide
         changeCurrentSlide(currentslide)
         activeDot(currentslide)
     }
